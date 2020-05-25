@@ -23,7 +23,8 @@ header {
 
 .main-title {
   font-size: 1.2em;
-  margin: 3em;
+  font-variant: small-caps;
+  margin: 3.4em 1.3em;
   text-align: right;
   color: #33373a;
   font-weight: 600;
@@ -31,8 +32,8 @@ header {
 
 .welcome {
   text-align: right;
-  margin: 0 10px 30px 0;
-  padding-top: 10px;
+  margin: 0 .7em 1.2em 0;
+  padding-top: .7em;
   font-size: 1em;
   color: #ffd700;
 }
@@ -57,50 +58,80 @@ body {
   background: -webkit-linear-gradient(to right, #F56217, #0B486B);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #F56217, #0B486B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+h2 {
+  position: absolute;
+  top: 8em;
+  font-variant: small-caps;
+
+}
 /* cards and grid elements */
+.card-grid {
+  margin: 3em .5em ;
+  display: grid;
+  grid-row-gap: .7em;
+  grid-column-gap: .7em;
+  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
+}
+
 .card {
   width: 100%;
   height: 100%;
-  border: .5em solid #ffd700;
+  border: .2em solid #ffd700;
   padding: 4%;
   background-color: #f8f8ff;
 }
 
-.images {
-  align-self: auto;
-  object-fit: scale-down;
-  width: 100%;
-  height: 250px;
-}
-
 .logo {
-  margin: 0 10px;
   object-fit: scale-down;
   width: 1.5em;
+  position: sticky;
+  top: 80em;
+}
+
+.image-elements {
+  height: 250px;
+  width: 100%;
+}
+
+.images {
+  width: 100%;
+  height: 250px;
   display: block;
+  opacity: 75%;
+  position: relative;
+}
+
+.fa-arrow-alt-circle-right {
+  position: relative;
+  top: -5em;
+  left: .5em;
+  color: #ffd700;
+}
+
+.img-views {
+  position: relative;
+  top: -13em;
+  left: -1em;
+  font-size: 1.5rem;
+  font-weight: bolder;
+  text-align: right;
+  color: #ffd700;
 }
 
 .card-titles {
  text-align: center;
- font-family: fantasy, sans-serif;
  font-size: 2em;
  height: 1em;
  font-weight: bold;
 }
 
 .card-info {
- text-transform: capitalize;
+ text-transform: uppercase;
  font-size: 1.5em;
 }
 
-.card-grid {
-  margin: 1em ;
-  align-items: center;
-  display: grid;
-  grid-row-gap: 1em;
-  grid-column-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(19em, 1fr));
-}
+
 /* footer information */
 footer {
   margin-top: 1em;
@@ -117,23 +148,25 @@ footer {
     padding: 0;
   }
 
+  h2 {
+    color: #f8f8ff;
+  }
+
   .card-grid {
-    margin: 1em .5em;
     grid-row-gap: .5em;
   }
 
   .header-button {
     width: 10em;
     font-size: .5em;
-    margin-top: 5em;
-    padding: .5em;
+    margin-top: 2em;
+    padding: .5em 0 2.5em 0;
   }
 
   .welcome {
-    text-align: center;
     padding: 0;
     margin:0;
-    font-size: .8em;
+    font-size: 1em;
   }
 
   .main-title {
